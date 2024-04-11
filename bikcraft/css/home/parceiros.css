@@ -1,0 +1,50 @@
+.parceiros {
+  margin-bottom: 120px;
+}
+.parceiros h2 {
+  margin-bottom: 60px;
+}
+.parceiros ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.parceiros li {
+  display: flex;
+  padding: 32px;
+}
+.parceiros img {
+  margin: auto;
+}
+.parceiros li {
+  border-left: 1px solid var(--cor-2);
+}
+.parceiros li:first-child,
+.parceiros li:nth-child(5) {
+  border: none;
+}
+.parceiros li:nth-child(n + 5) {
+  border-top: 1px solid var(--cor-2);
+}
+
+/* Parte responsiva dop site */
+@media (max-width: 800px) {
+  .parceiros {
+    margin-bottom: 0px;
+  }
+  .parceiros h2 {
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  .parceiros ul {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px;
+  }
+  .parceiros li:nth-child(odd) {
+    border-left: none;
+  }
+  .parceiros li:nth-child(n + 3) {
+    border-top: 1px solid var(--cor-2);
+  }
+}

@@ -1,0 +1,241 @@
+/* Conteudo de seleção Bikcraft ou seguro geral */
+.span-2 {
+  grid-column: span 2;
+}
+.orçamento {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+}
+.bg-cool-1 {
+  background-color: var(--cor-12);
+  padding: 60px 48px;
+  border-radius: 5px 0px 0px 5px;
+}
+/* Conteudo de seleção Bikcraft ou seguro */
+.orcamento-produtos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px 20px;
+  align-content: start;
+  border-radius: 5px;
+  background-color: var(--cor-12);
+  position: relative;
+}
+.orcamento-produtos h2 {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.orcamento-produtos h2::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  position: absolute;
+  left: -10px;
+}
+/* Espandido todas as labels */
+.orcamento-produtos > * {
+  grid-column: 1/-1;
+}
+/* mexendo apenas nas duas primeiras label */
+.orcamento-produtos > label {
+  grid-column: initial;
+  margin: 10px 0px;
+}
+/* estilizando as labels */
+.orcamento-produtos label {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: center;
+  font: 400 1rem/1.5 "popins", sans-serif;
+  background-color: var(--cor-10);
+  color: var(--cor-4);
+  padding: 12px 16px;
+  border-radius: 5px;
+  margin: 20px 0px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.orcamento-produtos label:hover {
+  background-color: var(--cor-9);
+}
+/* colocando borda no input */
+.orcamento-produtos input:focus + label {
+  border: 2px solid var(--cor-p1);
+  box-shadow: 0 0 0 #fea;
+}
+/* Mudando a cor do campo selecionado */
+.orcamento-produtos input:checked + label {
+  background: var(--cor-0);
+  color: var(--cor-11);
+}
+/* Sumir com o input */
+.orcamento-produtos input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Fazendo a bolinha do input */
+.orcamento-produtos label::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--cor-6);
+  border-radius: 50%;
+}
+/* Fazendo o preencimneto da bolinha quando clicar */
+.orcamento-produtos input:checked + label::before {
+  border: 1px solid var(--cor-7);
+  box-shadow: inset 0 0 0 3px var(--cor-0), inset 0 0 0 7px var(--cor-7);
+}
+/* Escondendo com o preço */
+.orcamento-produtos span {
+  display: none;
+}
+/* selecionando os items para mostrando o preço */
+.orcamento-produtos input:checked + label span {
+  display: block;
+}
+
+/* orcamento-detalhes  */
+.orcamento-detalhes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 16px;
+  padding: 20px;
+  background-color: var(--cor-0);
+  border-radius: 5px;
+}
+.orcamento-detalhes li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 0;
+  color: var(--cor-8);
+}
+.orcamento-detalhes li img {
+  width: 13px;
+  height: 13px;
+}
+.detahe-imagem img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Selecionando o Conteudo dentro da div #orcamento-bikcraft e #orcamento-seguro */
+/* #bikcraft:checked + label + input + label + #orcamento-bikcraft{ */
+#bikcraft:checked ~ #orcamento-bikcraft,
+#seguro:checked ~ #orcamento-seguro {
+  display: block;
+}
+/* escondendo Conteudo dentro da div #orcamento-bikcraft e #orcamento-seguro */
+.orcamento-conteudo {
+  display: none;
+}
+/* selecionando o Conteudo dentro da div .orcamento-detalhes */
+.orcamento-produtos input:checked + label + .orcamento-detalhes {
+  display: grid;
+}
+/* escondendo Conteudo dentro da div .orcamento-detalhes */
+.orcamento-detalhes {
+  display: none;
+}
+
+/* #bikcraft:checked + label,
+#seguro:checked + label {
+  background: green;
+} */
+
+/* #orcamento-bikcraft {
+  display: block;
+} */
+
+/* Inicio Orcamento Formulario  dados pessoais */
+.form-orcamento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form-orcamento label {
+  display: block;
+  color: var(--cor-11);
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  padding: 10px 0;
+}
+.form-orcamento input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid transparent;
+  font: 400 1rem/1.5 "popins", sans-serif;
+  background-color: var(--cor-1);
+}
+.form-orcamento input:focus {
+  border: 2px solid var(--cor-p1);
+  box-shadow: 0 0 0 #fea;
+}
+
+.orcamento-formulario {
+  background-color: var(--cor-0);
+  padding: 60px 48px;
+  border-radius: 0px 5px 5px 0px;
+}
+.orcamento-formulario h2 {
+  grid-column: span 2;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.orcamento-formulario h2::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 8px;
+  background-color: var(--cor-p1);
+}
+/* Parte responsiva do site */
+@media (max-width: 800px) {
+  .orçamento {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-orcamento {
+    grid-template-columns: 1fr;
+  }
+  .form-orcamento div:nth-child(n + 1) {
+    grid-column: span 2;
+  }
+  .bg-cool-1 {
+    padding: 20px 20px;
+    border-radius: 5px 5px 0px 0px;
+  }
+  .orcamento-formulario {
+    padding: 20px 20px;
+    border-radius: 5px 5px 0px 0px;
+  }
+}
+@media (max-width: 400px) {
+  .orcamento-produtos > label {
+    margin: 10px 0px;
+    grid-column: 1/-1;
+  }
+  .bg-cool-1 {
+    padding: 20px 20px;
+    border-radius: 5px 5px 0px 0px;
+  }
+  .orcamento-formulario {
+    padding: 20px 20px;
+    border-radius: 5px 5px 0px 0px;
+  }
+}

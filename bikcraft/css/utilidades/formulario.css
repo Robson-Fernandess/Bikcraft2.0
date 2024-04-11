@@ -1,0 +1,45 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.form label {
+  display: block;
+  font: 600 1rem/1.5 "popins", sans-serif;
+}
+.cool-2 {
+  /* grid-column: 1/-1; */
+  grid-column: span 2;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  font: 400 1rem/1.5 "Roboto", sans-serif;
+  background: var(--cor-1);
+  border: 1px solid var(--cor-3);
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+}
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+  outline: none;
+  border: 1px solid var(--cor-p1);
+  background: var(--cor-0);
+  box-shadow: 0 0 0 #fea;
+}
+
+@media (max-width: 880px) {
+  .contato-formulario {
+    padding: 20px;
+    border-radius: 0px 0px 0px 0px;
+  }
+  .form {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cool-2 {
+    /* grid-column: 1; */
+    grid-column: span 1;
+  }
+}

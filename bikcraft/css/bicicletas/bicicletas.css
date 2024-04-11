@@ -1,0 +1,129 @@
+.bicicletas-bg {
+  background-color: var(--cor-0);
+}
+.bg-might {
+  background-color: var(--cor-12);
+  /* box-shadow: inset 30vw 0px 0px 0px var(--cor-0); */
+  background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 30%);
+}
+.bicicletas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 60px 20px;
+}
+.bicicletas-img {
+  position: relative;
+}
+.bicicletas-img span {
+  background: var(--cor-12);
+  display: inline-block;
+  padding: 8px 16px 8px 8px;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  border-radius: 4px 0px 0px 4px;
+}
+.bicicletas-conteudo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start;
+}
+.bicicletas-conteudo h2 + p {
+  grid-column: 1/-1;
+}
+.bicicletas-conteudo h2 + p {
+  margin-bottom: 20px;
+}
+.bicicletas li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bicicletas-conteudo img {
+  width: 24px;
+  padding-top: 8px;
+}
+.bicicletas li + li {
+  padding: 5px 0;
+}
+.btn.seta {
+  justify-content: end;
+  align-self: flex-end;
+}
+
+/* Parte responsiva do site */
+@media (max-width: 800px) {
+  .bicicletas {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .bicicletas-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .bicicletas-conteudo ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .bg-might {
+    box-shadow: inset 400px 0px var(--cor-12);
+  }
+  .btn.seta {
+    justify-content: start;
+    align-self: flex-start;
+    margin-top: 20px;
+  }
+}
+
+/* SEGUNDA OPÇÃO
+.bicicletas-conteudo li {
+  color: var(--cor-8);
+  display: flex;
+  align-items: center;
+}
+.bicicletas-conteudo img {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-right: 20px;
+  border-radius: 25px;
+}
+.button {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  top: -60px;
+}
+.button a {
+  background: var(--cor-p2);
+  padding: 15px 50px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--cor-12);
+  font-weight: 600;
+}
+@media (max-width: 800px) {
+  .bicicletas {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+  .bicicletas-conteudo ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .button {
+    display: block;
+    justify-content: end;
+    position: relative;
+    top: 20px;
+  }
+  .button a {
+    background: var(--cor-p2);
+    padding: 15px 50px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: var(--cor-12);
+    font-weight: 600;
+  }
+} */

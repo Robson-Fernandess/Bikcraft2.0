@@ -1,0 +1,150 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* TITULOS DAS PAGINAS INTERNAS*/
+.titulo-bg {
+  background-color: var(--cor-11);
+}
+.titulo {
+  padding: 60px 20px;
+}
+.titulo p {
+  margin-bottom: 4px;
+}
+
+/* BOTÃO PRINCIPAL */
+
+.btn a {
+  display: inline-block;
+  /* padding: 16px 32px; */
+  background: linear-gradient(#ffbf00, #f2a50c);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  color: var(--cor-p5);
+  max-width: max-content;
+  font: 600 1.125rem/1.35 "Poppins", sans-serif;
+  /* font-size: 18px;
+  line-height: 1.33;
+  font-family: "poppins";
+  font-weight: 600; */
+}
+.btn a {
+  display: block;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+}
+.btn a:hover {
+  background: linear-gradient(#ffb60d, #e59317);
+}
+
+/* BOTÃO FORMULARIO */
+.btn-form {
+  display: inline-block;
+  padding: 16px 32px;
+  background: linear-gradient(#ffbf00, #f2a50c);
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  color: var(--cor-p5);
+  max-width: max-content;
+  font: 600 1.125rem/1.35 "Poppins", sans-serif;
+  cursor: pointer;
+}
+.btn-form:hover {
+  background: linear-gradient(#ffb60d, #e59317);
+}
+
+/* BOTÃO SECUNDARIO */
+.btn.secundario a {
+  background: var(--cor-10);
+  color: var(--cor-2);
+}
+.btn.secundario a:hover {
+  background: var(--cor-9);
+}
+
+/* BOTÃO SETA */
+.btn.seta a {
+  color: var(--cor-12);
+}
+.btn.seta a {
+  display: flex;
+  align-items: center;
+}
+.btn.seta a:after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../../img/icones/seta.svg");
+  transition: all 0.5s;
+}
+.btn.seta a:hover::after {
+  transform: translateX(5px);
+}
+
+@media (max-width: 800px) {
+  .btn.seta {
+    font-size: 1rem;
+    line-height: 1.33;
+    border-radius: 5px;
+    padding: 0px 0px;
+    text-align: center;
+  }
+  .btn a {
+    font-size: 1rem;
+    line-height: 1.33;
+    border-radius: 5px;
+    padding: 15px 22px;
+    text-align: center;
+  }
+  .btn {
+    font-size: 1rem;
+    line-height: 1.33;
+    border-radius: 5px;
+    padding: 15px 22px;
+    text-align: center;
+  }
+}
+
+/* resnposivo do site */
+@media (max-width: 1200px) {
+  .font-1-xxl {
+    font-size: 3rem;
+  }
+  .font-2-l,
+  .font-2-l-b {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .fonte-1-xxl {
+    font-size: 2rem;
+  }
+  .font-2-l {
+    font-size: 1.2rem;
+  }
+  .font-1-xl,
+  .font-2-xl {
+    font-size: 1.5rem;
+  }
+  .titulo-bg {
+    background-color: var(--cor-11);
+  }
+  .titulo {
+    padding: 20px;
+  }
+  .titulo p {
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+  }
+}

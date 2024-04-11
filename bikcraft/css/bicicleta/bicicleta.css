@@ -1,0 +1,126 @@
+.bicicleta {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding-bottom: 60px;
+}
+#bicicleta .titulo-bg p{
+  text-transform: capitalize;
+}
+#bicicleta .bicicletas-lista{
+  padding-bottom: 120px;
+}
+.bicicleta h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  margin-bottom: 12px;
+}
+.bicicleta-conteudo p {
+  padding-bottom: 10px;
+}
+
+.bicicleta-img-two-three {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+.bicicleta-img-two-three img {
+  flex: 1;
+  min-width: 200px;
+  gap: 40px;
+}
+
+/* bicicleta conteúdo*/
+.bicicleta-conteudo > p {
+  margin-bottom: 32px;
+}
+
+.bicicleta-comprar {
+  display: grid;
+  grid-template-columns: max-content auto;
+  justify-items: start;
+  align-items: center;
+  padding-bottom: 40px;
+  gap: 8px 12px;
+}
+.bicicleta-comprar a {
+  grid-row: span 2;
+}
+.bicicleta-comprar span {
+  background-color: var(--cor-12);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 4px 8px;
+}
+.bicicleta-comprar img {
+  margin: auto;
+}
+
+/* -- */
+.bicicleta-informacoes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--cor-12);
+  gap: 32px;
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+.bicicleta-ficha {
+  background-color: var(--cor-12);
+  padding: 32px;
+}
+
+.bicicleta-ficha li {
+  color: var(--cor-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+.bicicleta-ficha li + li {
+  border-top: 1px solid var(--cor-11);
+}
+.bicicleta-ficha span {
+  color: var(--cor-6);
+}
+
+@media (max-width: 800px) {
+  .bicicleta {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bicicleta-img-two-three {
+    grid-template-columns: 1fr 1fr;
+  }
+  .bicicleta-imagens {
+    /* order: 2; */
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 410px) {
+  .bicicleta {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    padding-bottom: 10px;
+  }
+  .bicicleta-comprar {
+    grid-template-columns: 1fr;
+    padding-bottom: 30px;
+  }
+  .bicicleta-comprar span {
+    margin-left: 0px;
+  }
+  .bicicleta-img-two-three {
+    grid-template-columns: 1fr;
+  }
+  .icones {
+    padding-top: 10px;
+  }
+  .bicicleta-informacoes {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,63 @@
+.depoimento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--cor-p1);
+}
+.depoimento img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: none;
+}
+.depoimento-conteudo {
+  padding: 80px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: end; */
+  align-self: flex-end;
+}
+.depoimento p {
+  max-width: 520px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  font-family: "Playfair+Display", serif;
+  font-style: italic;
+  font-weight: bold;
+  position: relative;
+}
+
+.depoimento p::before,
+.depoimento p::after {
+  content: "“";
+  display: inline-block;
+  font-size: 5rem;
+  color: var(--cor-p2);
+  position: absolute;
+}
+.depoimento p::before {
+  top: -20px;
+  left: -50px;
+}
+.depoimento p::after {
+  content: "”";
+}
+
+/* Parte responsiva do site */
+@media (max-width: 800px) {
+  .depoimento {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .depoimento img {
+    height: 200px;
+  }
+  .depoimento-conteudo {
+    background-color: var(--cor-p1);
+    text-align: center;
+    padding: 40px;
+  }
+  .depoimento p {
+    max-width: 420px;
+    font-size: 1.5rem;
+  }
+}

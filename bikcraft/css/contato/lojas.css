@@ -1,0 +1,73 @@
+.bg-lojas {
+  background-color: var(--cor-1);
+  padding: 80px 0;
+}
+.lojas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.lojas h2 {
+  /* grid-column: span 2; */
+  grid-column: 1/-1;
+  padding-bottom: 30px;
+}
+
+.lojas-conteudo {
+  background-color: var(--cor-0);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 32px 40px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.lojas-conteudo h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  grid-column: 1/-1;
+  padding-bottom: 20px;
+}
+.lojas-conteudo h3::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  margin-left: 1px;
+}
+.lojas-dados {
+  padding: 32px 0;
+}
+.lojas-dados a,
+.lojas-dados p {
+  display: block;
+  padding: 5px 12px;
+  border-left: 2px solid var(--cor-2);
+}
+
+.lojas-horario {
+  display: flex;
+  align-items: center;
+  grid-column: 1/-1;
+  gap: 10px;
+}
+.lojas-horario img {
+  margin: auto 0;
+}
+
+@media (max-width: 800px) {
+  .lojas {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .lojas-conteudo {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 16px 0px;
+  }
+  .lojas-conteudo h3 {
+    padding-bottom: 10px;
+  }
+  .lojas-dados {
+    padding: 16px 0;
+  }
+}

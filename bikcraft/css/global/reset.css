@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira-Sans", Arial, sans-serif;
+  list-style: none;
+  text-decoration: none;
+  /* border: 1px solid rgb(127, 134, 124); */
+  color: #111111;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+/* add borda somente nas img jpg*/
+img [src$=".jpg"] {
+  border-radius: 4px;
+}
